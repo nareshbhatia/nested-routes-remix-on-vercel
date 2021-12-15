@@ -13,27 +13,16 @@ import tailwindStyles from './styles/tailwind.css';
 
 export let links: LinksFunction = () => {
   return [
-    // preload Inter font for performance (font weights 400, 500, 600)
+    // load Inter font from Google Fonts
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
     {
-      rel: 'preload',
-      as: 'font',
-      href: '/fonts/inter-v7-latin-regular.woff2',
-      type: 'font/woff2',
+      rel: 'preconnect',
+      href: 'https://fonts.gstatic.com',
       crossOrigin: 'anonymous',
     },
     {
-      rel: 'preload',
-      as: 'font',
-      href: '/fonts/inter-v7-latin-500.woff2',
-      type: 'font/woff2',
-      crossOrigin: 'anonymous',
-    },
-    {
-      rel: 'preload',
-      as: 'font',
-      href: '/fonts/inter-v7-latin-600.woff2',
-      type: 'font/woff2',
-      crossOrigin: 'anonymous',
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap',
     },
 
     // load tailwind styles
